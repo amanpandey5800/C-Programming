@@ -1,14 +1,13 @@
 #include<stdio.h>
 int main(){
-    int n,i;
+    int n,i,s;
     scanf("%d",&n);
     int a[n];
-    for (int i=0;i<n;i++){
+    for(int i=0;i<n;i++){
         scanf("%d",&a[i]);
     }
     for(int i=0;i<n;i++){
-        if(i%2==0){
-            printf("%d,",a[i]);
-        }
+        s=s+a[i];
     }
+    printf("%d",s);
 }

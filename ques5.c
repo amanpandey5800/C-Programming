@@ -1,33 +1,22 @@
 #include<stdio.h>
 int main(){
-    int r,c,t=1;
-    printf("enter the rows & coloumns: ");
-    scanf("%d%d",&r,&c);
-    int a[r][c],b[r][c],d[r][c];
-    for(int i=0;i<r;i++){
-        for(int j=0;j<c;j++){
-             printf("enter the element at %d%d index",i,j);
-            scanf("%d",&a[i][j]);
-        }
-     }
-       for(int i=0;i<r;i++){
-        for(int j=0;j<c;j++){
-             printf("enter the element at %d%d index",i,j);
-            scanf("%d",&b[i][j]);
-        }
+    int n,i,c,max,min;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
     }
-        for(int i=0;i<r;i++){
-        for(int j=0;j<c;j++){
-            if(a[i][j]!=b[i][j]){
-                t=0;
-                break;
-            }
+    max=a[0];
+    min=a[0];
+    for(int i=0;i<n;i++){
+        if(a[i]>max){
+            max=a[i];
         }
+        else if(a[i]<min){
+            min=a[i];
         }
-if(t==1){
-    printf("\nequal");
-}
-else{
-    printf("\nnot equal");
-}
+     
+    }
+    printf("%d is the largest element\n",max);
+    printf("%d is the smallest element",min);
 }

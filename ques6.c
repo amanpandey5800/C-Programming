@@ -1,20 +1,18 @@
 #include<stdio.h>
 int main(){
-    int r,c,s=0;
-    printf("enter the rows and columns: ");
-    scanf("%d %d ",&r,&c);
-    int a[r][c];
-    for(int i=0;i<r;i++){
-        for(int j=0;j<c;j++){
-            printf("enter the element at %d%d index\n",i,j);
-            scanf("%d",&a[i][j]);
+    int n,i,max1,max2;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);}
+    for(int i=0;i<n;i++){
+        if(a[i]>max1){
+            max2 = max1;
+             max1 = a[i];
+        }
+        else if(a[i]>max2&&a[i]<max1){
+            max2 = a[i];
         }
     }
-    for(int i=0;i<r;i++){
-        for(int j=0;j<c;j++){
-            if(i==j){
-              printf("%d",a[i][j]);
-            }
-        }
-    }
+    printf("second largest number is %d",max2);
 }
